@@ -19,6 +19,19 @@ $router->get('/admin', function($request) {
     require_once('admin.php');
 });
 
+
+$router->get('/admin/addproduct', function($request) {
+
+    require_once('addproduct.php');
+
+});
+
+$router->post('/admin/addproduct', function($request) {
+
+    return json_encode($request->getBody());
+    
+});
+
 $router->post('/data', function($request) {
 
   return json_encode($request->getBody());
